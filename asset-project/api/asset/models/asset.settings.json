@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "assets",
+  "info": {
+    "name": "Asset"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "serialNumber": {
+      "type": "string"
+    },
+    "RFID": {
+      "type": "text"
+    },
+    "endOfLife": {
+      "type": "date"
+    },
+    "assetCode": {
+      "type": "string"
+    },
+    "assetDescription": {
+      "type": "text"
+    },
+    "asset_category": {
+      "model": "asset-category",
+      "via": "assets"
+    },
+    "employee_asset_mapping": {
+      "via": "asset",
+      "model": "employee-asset-mapping"
+    }
+  }
+}

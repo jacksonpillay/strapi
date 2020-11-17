@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "discrepancies",
+  "info": {
+    "name": "Discrepancy"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "discrepancyCodeDetails": {
+      "type": "text"
+    },
+    "discrepancy_type": {
+      "model": "discrepancy-type",
+      "via": "discrepancies"
+    },
+    "employee_asset_mapping": {
+      "model": "employee-asset-mapping",
+      "via": "discrepancies"
+    },
+    "notification": {
+      "via": "discrepancies",
+      "model": "notification"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "employee_asset_mappings",
+  "info": {
+    "name": "EmployeeAssetMapping",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "confirmedOn": {
+      "type": "datetime"
+    },
+    "employee": {
+      "model": "employee",
+      "via": "employee_asset_mappings"
+    },
+    "asset": {
+      "model": "asset",
+      "via": "employee_asset_mapping"
+    },
+    "discrepancies": {
+      "via": "employee_asset_mapping",
+      "collection": "discrepancy"
+    }
+  }
+}

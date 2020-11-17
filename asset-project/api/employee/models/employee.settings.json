@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "employees",
+  "info": {
+    "name": "Employee",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "employeeId": {
+      "type": "biginteger",
+      "unique": true
+    },
+    "firstname": {
+      "type": "string"
+    },
+    "lastname": {
+      "type": "string"
+    },
+    "mobileNumber": {
+      "type": "biginteger"
+    },
+    "emailAddress": {
+      "type": "email"
+    },
+    "serviceLine": {
+      "type": "string"
+    },
+    "band": {
+      "type": "string"
+    },
+    "isActive": {
+      "type": "boolean"
+    },
+    "manager": {
+      "model": "employee",
+      "via": "employees"
+    },
+    "employees": {
+      "collection": "employee",
+      "via": "manager"
+    },
+    "employee_asset_mappings": {
+      "via": "employee",
+      "collection": "employee-asset-mapping"
+    },
+    "notifications": {
+      "via": "employee",
+      "collection": "notification"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "statuses",
+  "info": {
+    "name": "Status"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "statusCode": {
+      "type": "string"
+    },
+    "statusDescription": {
+      "type": "text"
+    },
+    "notifications": {
+      "via": "status",
+      "collection": "notification"
+    }
+  }
+}

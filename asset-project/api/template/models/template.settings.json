@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "templates",
+  "info": {
+    "name": "Template",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "templateHolder": {
+      "type": "richtext"
+    },
+    "templateCode": {
+      "type": "string"
+    }
+  }
+}

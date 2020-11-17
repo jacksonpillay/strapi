@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "notifications",
+  "info": {
+    "name": "Notification",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "status": {
+      "model": "status",
+      "via": "notifications"
+    },
+    "employee": {
+      "model": "employee",
+      "via": "notifications"
+    },
+    "discrepancies": {
+      "collection": "discrepancy",
+      "via": "notification"
+    }
+  }
+}

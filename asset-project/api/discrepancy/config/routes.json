@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/discrepancies",
+      "handler": "discrepancy.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/discrepancies/count",
+      "handler": "discrepancy.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/discrepancies/:id",
+      "handler": "discrepancy.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/discrepancies",
+      "handler": "discrepancy.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/discrepancies/:id",
+      "handler": "discrepancy.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/discrepancies/:id",
+      "handler": "discrepancy.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

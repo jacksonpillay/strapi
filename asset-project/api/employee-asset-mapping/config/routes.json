@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/employee-asset-mappings",
+      "handler": "employee-asset-mapping.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/employee-asset-mappings/count",
+      "handler": "employee-asset-mapping.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/employee-asset-mappings/:id",
+      "handler": "employee-asset-mapping.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/employee-asset-mappings",
+      "handler": "employee-asset-mapping.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/employee-asset-mappings/:id",
+      "handler": "employee-asset-mapping.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/employee-asset-mappings/:id",
+      "handler": "employee-asset-mapping.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

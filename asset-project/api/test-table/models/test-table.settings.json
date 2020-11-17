@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "test_tables",
+  "info": {
+    "name": "Test_table",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Test_id": {
+      "type": "biginteger"
+    },
+    "Test_name": {
+      "type": "string"
+    },
+    "test_table": {
+      "model": "test-table",
+      "via": "test_tables"
+    },
+    "test_tables": {
+      "collection": "test-table",
+      "via": "test_table"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "discrepancy_types",
+  "info": {
+    "name": "DiscrepancyType"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "discrepancyCode": {
+      "type": "string"
+    },
+    "discrepancyDescription": {
+      "type": "text"
+    },
+    "discrepancies": {
+      "via": "discrepancy_type",
+      "collection": "discrepancy"
+    }
+  }
+}

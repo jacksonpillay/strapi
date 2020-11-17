@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/discrepancy-types",
+      "handler": "discrepancy-type.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/discrepancy-types/count",
+      "handler": "discrepancy-type.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/discrepancy-types/:id",
+      "handler": "discrepancy-type.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/discrepancy-types",
+      "handler": "discrepancy-type.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/discrepancy-types/:id",
+      "handler": "discrepancy-type.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/discrepancy-types/:id",
+      "handler": "discrepancy-type.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
